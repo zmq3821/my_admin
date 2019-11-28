@@ -6,36 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>后台登录</title>
     <link rel="stylesheet" type="text/css" href="__CSS__xadmin.css">
-    <link rel="stylesheet" type="text/css" href="__CSS__login.css">
+    <link rel="stylesheet" type="text/css" href="__LIBRARY__layui-v2.5.5/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__login.css?t=<?php echo time();?>">
 </head>
 <body>
 <div id="wrapper" class="login-page">
     <div id="login_form" class="form">
+        {if $act == 'register'}
         <!--注册-->
-        <form class="register-form">
-            <input type="text" name="user_name" placeholder="用户名" value="admin" id="r_user_name" />
-            <input type="password" name="password" placeholder="密码" id="r_password" />
-            <input type="text" name="email" placeholder="邮箱" id="r_emial" />
-            <input type="text" name="code" placeholder="验证码" id="r_code" class="login_code"/>
-            <img src="" class="login_code_img"/>
-            <button id="create">创建账户</button>
-            <p class="message">已经有了一个账户? <a href="#">立刻登录</a></p>
+        <form class="register-form layui-form">
+            <h2>用户注册</h2>
+            <input type="text" name="user_name" lay-verify="required" placeholder="用户名" value="" id="r_user_name" />
+            <input type="text" name="phone" lay-verify="required|phone" placeholder="手机号" id="r_phone" maxlength="11" />
+            <input type="text" name="email" lay-verify="required|email" placeholder="邮箱" id="r_emial" />
+            <input type="password" name="pwd" lay-verify="required" placeholder="密码" id="r_pwd" />
+            <input type="password" name="pwd_repeat" lay-verify="required" placeholder="确认密码" id="r_pwd_repeat" />
+            <input type="text" name="verify" lay-verify="required" placeholder="验证码" id="r_verify" class="login_code" maxlength="8" />
+            <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
+            <button id="create" lay-submit lay-filter="btn_register">创建账户</button>
+            <p class="message" onclick="window.location.href='{:url(\'Login/login\')}'">已经有了一个账户? <a href="#">立刻登录</a></p>
         </form>
+        {else /}
         <!--登录-->
         <form class="login-form">
             <h2>管理登录</h2>
-            <input type="text" name="user_name" placeholder="用户名" value="admin" id="user_name" />
-            <input type="password" name="password" placeholder="密码" id="password" />
-            <input type="text" name="code" placeholder="验证码" id="code" class="login_code" />
-            <img src="{:url('Login/getCaptcha')}" alt="captcha" class="login_code_img"/>
-            <button id="login">登　录</button>
-            <p class="message">还没有账户? <a href="#">立刻创建</a></p>
+            <input type="text" name="uname" placeholder="用户名/手机号" value="" id="user_name" />
+            <input type="password" name="pwd" placeholder="密码" id="password" />
+            <input type="text" name="verify" placeholder="验证码" id="verify" class="login_code" maxlength="8" />
+            <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
+            <button id="login" lay-submit lay-filter="btn_login">登　录</button>
+            <p class="message" onclick="window.location.href='{:url(\'Login/register\')}'">还没有账户? <a href="#">立刻创建</a></p>
         </form>
+        {/if}
     </div>
 </div>
 
-<script src="__JS__jquery.min.js"></script>
+<script src="__LIBRARY__layui-v2.5.5/layui.js"></script>
 <script type="text/javascript">
+    layui.use(['form','layer'], function () {
+        var form = layui.form, layer = layui.layer;
+        var $ = layui.$;
+
+        //监听注册提交
+        form.on('submit(btn_register)', function(data){
+            var params = data.field;
+            if (params.pwd != params.pwd_repeat) {
+                layer.msg("两次密码不一致", {icon:2});
+            }
+            requestPost("{:url('Login/doRegister')}", params);
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        //监听登录提交
+        form.on('submit(btn_login)', function(data){
+            var params = data.field;
+            requestPost("{:url('Login/doLogin')}", params);
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        //post请求后台
+        function requestPost(url, params, fun) {
+            if(!url || !params) return ;
+            $.post(url,params,function (res) {
+               console.log(res);
+               if(typeof fun === 'function') fun(res);
+            });
+        }
+
+    });
     function check_login(){
         var name=$("#user_name").val();
         var pass=$("#password").val();
@@ -52,10 +90,14 @@
             },1);
         }
     }
+
+    //注册验证
     function check_register(){
         var name = $("#r_user_name").val();
         var pass = $("#r_password").val();
-        var email = $("r_email").val();
+        var email = $("#r_email").val();
+        var verify = $("#r_verify").val();
+
         if (name!="" && pass=="" && email != "") {
             alert("注册成功！");
             $("#user_name").val("");
@@ -68,7 +110,8 @@
             },1);
         }
     }
-    $(function(){
+
+    /*$(function(){
         $("#create").click(function(){
             check_register();
             return false;
@@ -83,7 +126,7 @@
                 opacity: 'toggle'
             }, 'slow');
         });
-    })
+    })*/
 </script>
 </body>
 </html>
