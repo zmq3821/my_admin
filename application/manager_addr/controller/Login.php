@@ -2,9 +2,8 @@
 namespace app\manager_addr\controller;
 
 use app\basic\controller\Admin;
-use \think\captcha\Captcha;
-use think\Config;
 use think\Validate;
+use app\basic\model\User;
 
 class Login extends Admin
 {
@@ -32,7 +31,7 @@ class Login extends Admin
     }
 
     /**
-     * @notes: 注册
+     * @notes: 注册页面
      * @author: zmq
      * @date: 2019/11/28 0028 上午 11:20
      */
@@ -42,6 +41,11 @@ class Login extends Admin
         return $this->fetch('login');
     }
 
+    /**
+     * @notes: 注册账号
+     * @author: zmq
+     * @date: 2019/11/29 0029 下午 5:12
+     */
     public function doRegister()
     {
         $params = input('post.');
@@ -49,9 +53,22 @@ class Login extends Admin
         if (true !== $verify) {
             ajax_error($verify);
         }
-        $result = array();
-        ajax_success('操作成功',$result);
-        dump($params);die;
+
+        //写入数据
+        $user = new User($params);
+        $insert_id = $user->allowField(true)->save();
+        if ($insert_id) {
+            $user_info = $user->where(['uid'=>$insert_id,'is_del'=>User::NO])->find();
+            if(!empty($user_info)) {
+                $this->mid = $insert_id;
+                session('mid', $insert_id);
+                session('user_name', $user_info['user_name']);
+            }
+        } else {
+            ajax_error("注册失败");
+        }
+
+        ajax_success('操作成功');
     }
 
     /**

@@ -76,7 +76,7 @@
             $.post(url,params,function (res) {
                 if(res.status == 0) {
                     animation_shake();
-                    layer.msg("注册失败：" + res.msg, {icon:2,time:2000});
+                    layer.msg(res.msg, {icon:2,time:2000});
                     return false;
                 }
                 //成功时回调

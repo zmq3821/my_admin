@@ -2,44 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6f0cb7-a43b-4190-9242-25eab7204f09" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/bgs/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/1.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/3.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/4.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/5.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/ttfs/6.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/assets/zhttfs/1.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/src/Captcha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/src/CaptchaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/topthink/think-captcha/src/helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/basic/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/basic/model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/manager_addr/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/controller/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/manager_addr/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/manager_addr/view/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,12 +19,12 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+            <state relative-caret-position="233">
+              <caret line="48" column="30" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="30" />
               <folding>
                 <element signature="e#46#77#0#PHP" expanded="true" />
               </folding>
@@ -65,13 +33,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/common.php">
+        <entry file="file://$PROJECT_DIR$/application/manager_addr/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="437">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
-                <element signature="e#6#80#0#PHP" expanded="true" />
+                <element signature="e#41#57#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/basic/model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -79,8 +56,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/manager_addr/view/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+            <state relative-caret-position="433">
+              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="920">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+              <folding>
+                <element signature="e#6#80#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,20 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/manager/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="824">
               <caret line="102" column="13" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="250" column="28" selection-start-line="250" selection-start-column="23" selection-end-line="250" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#80#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,11 +107,16 @@
       <find>create</find>
       <find>r_code</find>
       <find>shake_effect</find>
+      <find>layui.msg</find>
+      <find>login_form</find>
+      <find>$result</find>
     </findStrings>
     <replaceStrings>
       <replace>__CSS__</replace>
       <replace>__JS__login/</replace>
       <replace>../images</replace>
+      <replace>layer.msg</replace>
+      <replace>$insert_id</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\phpstudy\PHPTutorial\WWW\my_admin\vendor</dir>
@@ -163,7 +145,6 @@
         <option value="$PROJECT_DIR$/config/conf_dev.php" />
         <option value="$PROJECT_DIR$/application/config/dev_database.php" />
         <option value="$PROJECT_DIR$/application/config/pro_database.php" />
-        <option value="$PROJECT_DIR$/application/manager_addr/controller/User.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/controller/Index.php" />
         <option value="$PROJECT_DIR$/public/static/manager/css/demo.css" />
         <option value="$PROJECT_DIR$/public/static/manager/css/component.css" />
@@ -173,11 +154,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/basic/controller/Admin.php" />
         <option value="$PROJECT_DIR$/public/static/manager/css/login.css" />
-        <option value="$PROJECT_DIR$/application/config.php" />
         <option value="$PROJECT_DIR$/application/database.php" />
-        <option value="$PROJECT_DIR$/application/manager_addr/view/login/login.html" />
-        <option value="$PROJECT_DIR$/application/manager_addr/controller/Login.php" />
         <option value="$PROJECT_DIR$/application/common.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/validate/User.php" />
+        <option value="$PROJECT_DIR$/application/config.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/view/login/login.html" />
+        <option value="$PROJECT_DIR$/application/basic/model/User.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/controller/Login.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/controller/User.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/model/User.php" />
       </list>
     </option>
   </component>
@@ -193,14 +178,62 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="think_core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,18 +246,19 @@
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\basic\model" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js\login" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\images" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\css" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js\login\vender" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js\login" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,6 +287,8 @@
       <workItem from="1574816510624" duration="4050000" />
       <workItem from="1574825528398" duration="11534000" />
       <workItem from="1574906820339" duration="12972000" />
+      <workItem from="1574989365345" duration="7068000" />
+      <workItem from="1575017197775" duration="3459000" />
     </task>
     <task id="LOCAL-00001" summary="上传 think_core 核心文件">
       <created>1574817769304</created>
@@ -282,18 +318,26 @@
       <option name="project" value="LOCAL" />
       <updated>1574908834388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="注册逻辑90%">
+      <created>1574996422628</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574996422628</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34446000" />
+    <option name="totallyTimeSpent" value="44973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -320,37 +364,10 @@
     <MESSAGE value="上传" />
     <MESSAGE value="重新声明.gitignore文件内容" />
     <MESSAGE value="upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload" />
+    <MESSAGE value="注册逻辑90%" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册逻辑90%" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/dev_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/think_core/library/think/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="292" column="27" selection-start-line="292" selection-start-column="27" selection-end-line="292" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/think_core/library/think/response/Redirect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -384,13 +401,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/manager/js/xcity.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
@@ -437,21 +447,7 @@
     <entry file="file://$PROJECT_DIR$/think">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/think_core/base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkphp/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1242" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/README.md" />
     <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -556,10 +552,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/think_core/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="250" column="28" selection-start-line="250" selection-start-column="23" selection-end-line="250" selection-end-column="28" />
+        <state relative-caret-position="525">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding>
             <element signature="e#6#80#0#PHP" expanded="true" />
           </folding>
@@ -568,34 +588,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/manager/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="824">
           <caret line="102" column="13" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/validate/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#6#122#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/manager_addr/view/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+        <state relative-caret-position="433">
+          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/basic/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        <state relative-caret-position="233">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="30" />
           <folding>
             <element signature="e#46#77#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common.php">
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="437">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="e#41#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
