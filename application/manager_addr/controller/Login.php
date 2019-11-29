@@ -45,14 +45,9 @@ class Login extends Admin
     public function doRegister()
     {
         $params = input('post.');
-        $validate = new Validate([
-            'user_name'  => 'require',
-            'phone'      => 'phone',
-            'email'      => 'email'
-        ]);
-        if (!$validate->check($params)) {
-            dump($validate->getError());
-            ajax_error($validate->getError());
+        $verify = $this->validate($params,'User');
+        if (true !== $verify) {
+            ajax_error($verify);
         }
         $result = array();
         ajax_success('操作成功',$result);

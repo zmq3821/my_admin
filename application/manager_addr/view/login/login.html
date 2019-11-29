@@ -19,8 +19,8 @@
             <input type="text" name="user_name" lay-verify="required" placeholder="用户名" value="" id="r_user_name" />
             <input type="text" name="phone" lay-verify="required|phone" placeholder="手机号" id="r_phone" maxlength="11" />
             <input type="text" name="email" lay-verify="required|email" placeholder="邮箱" id="r_emial" />
-            <input type="password" name="pwd" lay-verify="required" placeholder="密码" id="r_pwd" />
-            <input type="password" name="pwd_repeat" lay-verify="required" placeholder="确认密码" id="r_pwd_repeat" />
+            <input type="password" name="password" lay-verify="required" placeholder="密码" id="r_pwd" />
+            <input type="password" name="repassword" lay-verify="required" placeholder="确认密码" id="r_pwd_repeat" />
             <input type="text" name="verify" lay-verify="required" placeholder="验证码" id="r_verify" class="login_code" maxlength="8" />
             <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
             <button id="create" lay-submit lay-filter="btn_register">创建账户</button>
@@ -31,7 +31,7 @@
         <form class="login-form">
             <h2>管理登录</h2>
             <input type="text" name="uname" placeholder="用户名/手机号" value="" id="user_name" />
-            <input type="password" name="pwd" placeholder="密码" id="password" />
+            <input type="password" name="password" placeholder="密码" id="password" />
             <input type="text" name="verify" placeholder="验证码" id="verify" class="login_code" maxlength="8" />
             <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
             <button id="login" lay-submit lay-filter="btn_login">登　录</button>
@@ -50,10 +50,16 @@
         //监听注册提交
         form.on('submit(btn_register)', function(data){
             var params = data.field;
-            if (params.pwd != params.pwd_repeat) {
-                layer.msg("两次密码不一致", {icon:2});
+            console.log(params);
+            if (params.password != params.repassword) {
+                layer.msg("两次密码不一致", {icon:2,time:1800});
+                return false;
             }
-            requestPost("{:url('Login/doRegister')}", params);
+            requestPost("{:url('Login/doRegister')}", params, function (res) {
+                layer.msg("注册成功", {icon:1,time:1500}, function () {
+                    window.location.href='{:url(\'Index/index\')}';
+                });
+            });
             return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
         });
 
@@ -68,65 +74,26 @@
         function requestPost(url, params, fun) {
             if(!url || !params) return ;
             $.post(url,params,function (res) {
-               console.log(res);
-               if(typeof fun === 'function') fun(res);
+                if(res.status == 0) {
+                    animation_shake();
+                    layer.msg("注册失败：" + res.msg, {icon:2,time:2000});
+                    return false;
+                }
+                //成功时回调
+                if(typeof fun === 'function') fun(res);
             });
         }
 
+        //容器的抖动动画
+        function animation_shake() {
+            $("#login_form").removeClass('shake_effect');
+            setTimeout(function()
+            {
+                $("#login_form").addClass('shake_effect')
+            },1);
+        }
     });
-    function check_login(){
-        var name=$("#user_name").val();
-        var pass=$("#password").val();
-        if (name=="admin" && pass=="admin") {
-            alert("登录成功！");
-            $("#user_name").val("");
-            $("#password").val("");
-            $(location).attr('href', 'index.html');
-        } else {
-            $("#login_form").removeClass('shake_effect');
-            setTimeout(function()
-            {
-                $("#login_form").addClass('shake_effect')
-            },1);
-        }
-    }
 
-    //注册验证
-    function check_register(){
-        var name = $("#r_user_name").val();
-        var pass = $("#r_password").val();
-        var email = $("#r_email").val();
-        var verify = $("#r_verify").val();
-
-        if (name!="" && pass=="" && email != "") {
-            alert("注册成功！");
-            $("#user_name").val("");
-            $("#password").val("");
-        } else {
-            $("#login_form").removeClass('shake_effect');
-            setTimeout(function()
-            {
-                $("#login_form").addClass('shake_effect')
-            },1);
-        }
-    }
-
-    /*$(function(){
-        $("#create").click(function(){
-            check_register();
-            return false;
-        });
-        $("#login").click(function(){
-            check_login();
-            return false;
-        });
-        $('.message a').click(function () {
-            $('form').animate({
-                height: 'toggle',
-                opacity: 'toggle'
-            }, 'slow');
-        });
-    })*/
 </script>
 </body>
 </html>

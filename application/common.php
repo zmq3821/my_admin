@@ -11,7 +11,7 @@
 
 // 应用公共文件
 /**
- * @notes: 返回固定结构的json数据
+ * @notes: ajax成功的返回
  * @param int $status 状态码
  * @param string $msg
  * @param array $data
@@ -27,6 +27,12 @@ function ajax_success($msg='', array $data=array()){
     exit;
 }
 
+/**
+ * @notes: ajax失败的返回
+ * @param string $msg
+ * @author: zmq
+ * @date: 2019/11/29 0029 上午 9:03
+ */
 function ajax_error($msg='') {
     header('Content-Type:application/json');
     $result = array('status'=>0, 'msg'=>'操作失败');
@@ -37,6 +43,19 @@ function ajax_error($msg='') {
     }
     echo json_encode($result);
     exit;
+}
+
+/**
+ * @notes: 判断字符串是否符合手机号码格式
+ * @param $mobile
+ */
+function is_mobile($mobile) {
+    $regex = "/^(1(([35789][0-9])|(47)))\d{8}$/";
+    if (preg_match($regex, $mobile)) {
+       return true;
+    } else {
+        return false;
+    }
 }
 
 
