@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册管理</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__CSS__font.css">
+    <link rel="stylesheet" href="__CSS__xadmin.css">
+
+    <script src="__JS__jquery.min.js"></script>
+    <script src="__LIBRARY__layui-v2.5.5/layui.js"></script>
+    <script type="text/javascript" src="__JS__xadmin.js"></script>
+</head>
+<body>
+
+<div class="layui-fluid layadmin-cmdlist-fluid">
+    <div class="layui-row layui-col-space30">
+        <?php for($i=0;$i<18;$i++){ ?>
+        <div class="layui-col-md2 layui-col-sm4">
+            <div class="cmdlist-container">
+                <a href="javascript:;">
+                    <img src="https://www.layui.com/admin/std/dist/layuiadmin/style/res/template/portrait.png">
+                </a>
+                <a href="javascript:;">
+                    <div class="cmdlist-text">
+                        <p class="info">2018春夏季新款港味短款白色T恤+网纱中长款chic半身裙套装两件套</p>
+                        <div class="price">
+                            <b>￥79</b>
+                            <p>
+                                ¥
+                                <del>130</del>
+                            </p>
+                            <span class="flow">
+                      <i class="layui-icon layui-icon-rate"></i>
+                      433
+                    </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <?php }?>
+
+</body>
+</html>

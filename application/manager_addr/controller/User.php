@@ -1,9 +1,9 @@
 <?php
 namespace app\manager_addr\controller;
 
-use app\basic\controller\Admin;
+use app\basic\controller\Administer;
 
-class User extends Admin
+class User extends Administer
 {
 
 }

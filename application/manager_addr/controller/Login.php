@@ -1,12 +1,12 @@
 <?php
 namespace app\manager_addr\controller;
 
-use app\basic\controller\Admin;
+use app\basic\controller\Administer;
 use think\Validate;
 use app\manager_addr\model\UserModel;
 use app\manager_addr\model\LoginModel;
 
-class Login extends Admin
+class Login extends Administer
 {
     /**
      * @notes: 登录

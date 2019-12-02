@@ -1,10 +1,10 @@
 <?php
 namespace app\manager_addr\controller;
 
-use app\basic\controller\Admin;
+use app\basic\controller\Administer;
 use app\basic\model\BaseUserModel;
 
-class Index extends Admin
+class Index extends Administer
 {
     /**
      * @notes: 后台主页框架
