@@ -30,6 +30,18 @@ class BaseUserModel extends Model
     const NO = 0;
 
 
+    public function getUserInfo($uid=0)
+    {
+        $uid = $uid ?: intval(session('mid'));
+        if (empty($uid)) return [];
+
+        $field = "uid,user_name,phone,email,last_login_time,sex,intro,create_time";
+        $data = $this->where(['is_del'=>self::NO, 'uid'=>$uid])->field($field)->find();
+
+        return empty($data) ? [] : $data->getData();
+    }
+
+
 
 
 
