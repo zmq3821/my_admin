@@ -18,7 +18,8 @@ class Admin extends Controller
             $mod = request()->controller();
             if($mod != 'Login') {
                 //记住本次请求地址
-                redirect('manager_addr/Login/login')->remember();
+                $last_act_url = get_current_url();
+                cookie('last_act_url', $last_act_url);
                 $this->redirect('manager_addr/Login/login');
             }
         }

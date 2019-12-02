@@ -16,26 +16,29 @@ class User extends Validate
     //验证器规则
     protected $rule = [
         'verify'        =>  'require|captcha',
-        'user_name'     =>  'require',
+        'user_name'     =>  'require|min:4',
         'phone'         =>  'checkPhone',
         'email'         =>  'email',
-        'password'      =>  'require',
+        'password'      =>  'require|min:6',
         'repassword'    =>  'require|confirm:password',
     ];
 
     //验证器提示信息
     protected $message = [
-        'verify'      =>  '验证码错误',
-        'user_name'   =>  '用户名/账号不能为空',
-        'phone'       =>  '用手机号格式错误',
-        'email'       =>  '邮箱格式错误',
-        'password'    =>  '密码不能为空',
-        'repassword'  =>  '两次密码不一致',
+        'verify'        =>  '验证码错误',
+        'user_name'     =>  '用户名/账号不能为空',
+        'user_name.min' =>  '用户名/账号最少4位',
+        'phone'         =>  '用手机号格式错误',
+        'email'         =>  '邮箱格式错误',
+        'password'      =>  '密码不能为空',
+        'password.min'  =>  '密码最少6位',
+        'repassword'    =>  '两次密码不一致'
     ];
 
     //验证器场景
     protected $scene = [
-        'edit'  =>  ['user_name','phone','email'],
+        'edit'   =>  ['user_name', 'phone', 'email'],
+        'login'  =>  ['verify', 'password', 'user_name'=>'require|min:4'],
     ];
 
 

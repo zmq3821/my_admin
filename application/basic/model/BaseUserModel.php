@@ -3,8 +3,13 @@ namespace app\basic\model;
 
 use think\Model;
 
-class User extends Model
+class BaseUserModel extends Model
 {
+    // 设置当前模型对应的数据表名称（不加前缀）
+    protected $table_name = 'user';
+    protected $table = 'ts_user';
+    protected $pk = 'uid';
+
     //自定义初始化
     protected function initialize()
     {
@@ -20,11 +25,7 @@ class User extends Model
     //自动写入创建和更新的时间戳字段
     protected $autoWriteTimestamp = true;
 
-    // 表操作允许的字段
-    protected $allow_fields = [
-        'uid','user_name','password','login_salt','email','sex','phone','intro','last_login_time','is_del'
-    ];
-
+    //通用的状态码
     const YES = 1;
     const NO = 0;
 

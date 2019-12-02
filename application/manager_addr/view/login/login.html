@@ -22,18 +22,18 @@
             <input type="password" name="password" lay-verify="required" placeholder="密码" id="r_pwd" />
             <input type="password" name="repassword" lay-verify="required" placeholder="确认密码" id="r_pwd_repeat" />
             <input type="text" name="verify" lay-verify="required" placeholder="验证码" id="r_verify" class="login_code" maxlength="8" />
-            <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
+            <img src="{:captcha_src()}" alt="captcha" id="r_captcha_img" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
             <button id="create" lay-submit lay-filter="btn_register">创建账户</button>
             <p class="message" onclick="window.location.href='{:url(\'Login/login\')}'">已经有了一个账户? <a href="#">立刻登录</a></p>
         </form>
         {else /}
         <!--登录-->
-        <form class="login-form">
+        <form class="login-form layui-form">
             <h2>管理登录</h2>
-            <input type="text" name="uname" placeholder="用户名/手机号" value="" id="user_name" />
-            <input type="password" name="password" placeholder="密码" id="password" />
-            <input type="text" name="verify" placeholder="验证码" id="verify" class="login_code" maxlength="8" />
-            <img src="{:captcha_src()}" alt="captcha" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
+            <input type="text" name="user_name" lay-verify="" placeholder="用户名/手机号" value="" id="user_name" />
+            <input type="password" name="password" lay-verify="required" placeholder="密码" id="password" />
+            <input type="text" name="verify" lay-verify="required" placeholder="验证码" id="verify" class="login_code" maxlength="8" />
+            <img src="{:captcha_src()}" alt="captcha" id="captcha_img" class="login_code_img verify" onclick="javascript:this.src='{:captcha_src()}?rand='+Math.random()" />
             <button id="login" lay-submit lay-filter="btn_login">登　录</button>
             <p class="message" onclick="window.location.href='{:url(\'Login/register\')}'">还没有账户? <a href="#">立刻创建</a></p>
         </form>
@@ -50,23 +50,45 @@
         //监听注册提交
         form.on('submit(btn_register)', function(data){
             var params = data.field;
-            console.log(params);
             if (params.password != params.repassword) {
                 layer.msg("两次密码不一致", {icon:2,time:1800});
                 return false;
             }
             requestPost("{:url('Login/doRegister')}", params, function (res) {
-                layer.msg("注册成功", {icon:1,time:1500}, function () {
-                    window.location.href='{:url(\'Index/index\')}';
-                });
+                if (res.status == 1) {
+                    layer.msg("注册成功", {icon:1,time:1500}, function () {
+                        if (res.data.jump_url != '' && res.data.jump_url != null) {
+                            window.location.href='' + res.data.jump_url;
+                        }
+                    });
+                } else {
+                    animation_shake();
+                    resetCaptcha('r_captcha_img');//重置验证码
+                    layer.msg(res.msg, {icon:2,time:2000});
+                    return false;
+                }
             });
             return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
         });
 
+
         //监听登录提交
         form.on('submit(btn_login)', function(data){
             var params = data.field;
-            requestPost("{:url('Login/doLogin')}", params);
+            requestPost("{:url('Login/doLogin')}", params, function (res) {
+                if (res.status == 1) {
+                    layer.msg("登陆成功", {icon:1,time:1500}, function () {
+                        if (res.data.jump_url != '' && res.data.jump_url != null) {
+                            window.location.href='' + res.data.jump_url;
+                        }
+                    });
+                } else {
+                    animation_shake();
+                    resetCaptcha('captcha_img');//重置验证码
+                    layer.msg(res.msg, {icon:2,time:2000});
+                    return false;
+                }
+            });
             return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
         });
 
@@ -74,11 +96,6 @@
         function requestPost(url, params, fun) {
             if(!url || !params) return ;
             $.post(url,params,function (res) {
-                if(res.status == 0) {
-                    animation_shake();
-                    layer.msg(res.msg, {icon:2,time:2000});
-                    return false;
-                }
                 //成功时回调
                 if(typeof fun === 'function') fun(res);
             });
@@ -92,6 +109,13 @@
                 $("#login_form").addClass('shake_effect')
             },1);
         }
+
+        //重置验证码
+        function resetCaptcha(id) {
+            var captcha_src = '{:captcha_src()}?ran='+Math.random();
+            $('#'+id).attr('src', captcha_src);
+        }
+
     });
 
 </script>

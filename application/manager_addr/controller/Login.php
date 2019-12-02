@@ -3,7 +3,8 @@ namespace app\manager_addr\controller;
 
 use app\basic\controller\Admin;
 use think\Validate;
-use app\basic\model\User;
+use app\manager_addr\model\UserModel;
+use app\manager_addr\model\LoginModel;
 
 class Login extends Admin
 {
@@ -25,9 +26,22 @@ class Login extends Admin
      */
     public function doLogin()
     {
-        //session('mid', 34);
-        $jump_url = redirect()->restore();
-        dump($jump_url);die;
+        $params = input('post.');
+        //验证数据
+        $verify = $this->validate($params,'User.login');
+        if (true !== $verify) {
+            ajax_error($verify);
+        }
+
+        //登陆验证
+        $login = new LoginModel();
+        $result = $login->checkUserLogin($params);
+        $error_msg = $login->getErrorMsg() ?: '用户名或密码错误';
+        if (!$result) ajax_error($error_msg);
+
+        $jump_url = cookie('last_act_url') ?: url('Index/index');
+        cookie('last_act_url', null);
+        ajax_success("验证通过", ['jump_url'=>$jump_url]);
     }
 
     /**
@@ -49,26 +63,24 @@ class Login extends Admin
     public function doRegister()
     {
         $params = input('post.');
+        //验证数据
         $verify = $this->validate($params,'User');
         if (true !== $verify) {
             ajax_error($verify);
         }
 
-        //写入数据
-        $user = new User($params);
-        $insert_id = $user->allowField(true)->save();
-        if ($insert_id) {
-            $user_info = $user->where(['uid'=>$insert_id,'is_del'=>User::NO])->find();
-            if(!empty($user_info)) {
-                $this->mid = $insert_id;
-                session('mid', $insert_id);
-                session('user_name', $user_info['user_name']);
-            }
-        } else {
-            ajax_error("注册失败");
+        //开始注册
+        $login = new LoginModel();
+        $result = $login->registerUser($params);
+        if (!$result) {
+            $err_msg = '注册失败' . ($login->getErrorMsg() ? ',' . $login->getErrorMsg() : '');
+            ajax_error($err_msg);
         }
 
-        ajax_success('操作成功');
+        //注册成功记录状态
+        session('mid', $result);
+
+        ajax_success('操作成功',['jump_url'=>url('Index/index')]);
     }
 
     /**
@@ -78,6 +90,9 @@ class Login extends Admin
      */
     public function logout()
     {
-
+        session('mid', null);
+        session('uname', null);
+        $this->mid = null;
+        $this->redirect('manager_addr/Login/login');
     }
 }

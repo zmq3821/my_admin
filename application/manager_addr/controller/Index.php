@@ -7,7 +7,7 @@ class Index extends Admin
 {
     public function index()
     {
-        //dump($_SERVER['ENV']);
+        dump(session('mid'));
         echo "dssdewrw3erf";
     }
 }
