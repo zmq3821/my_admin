@@ -259,7 +259,25 @@ $config = [
         'length'    => 4,
         //验证成功后是否重置
         'reset'     => true,
+    ],
+
+    // +----------------------------------------------------------------------
+    // | 腾讯云COS参数设置
+    // +----------------------------------------------------------------------
+
+    'cos_config' => [
+        'secretId'        => 'AKIDHQPDpHLks46yaU60XurLvfIk8Wu8n4B9',    //云 API 密钥 SecretId
+        'secretKey'       => 'N0Tlstp4BFHTzRueFfT7CWoxvq2d6EQR',       //云 API 密钥 SecretKey
+        'region'          => 'ap-beijing',       //设置一个默认的存储桶地域
+        'schema'          => 'https',   //协议头部，默认为http
+        'bucket_info'     => [
+            'common-img-1255561412'    => ['region'=> 'ap-beijing'],
+            'course-image-1255561412'  => ['region'=> 'ap-beijing']
+        ],
+        'image_max_size'  => '5242880',  //cos上传图片的最大字节(b) 5M
+        'video_max_size'  => '2684354560',  //cos上传视频的最大字节(b) 2.5G
     ]
+
 ];
 
 /**

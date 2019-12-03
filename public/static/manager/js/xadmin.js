@@ -11,7 +11,7 @@ $(function () {
         tabAdd: function(title,url,id){
           //新增一个Tab项
           element.tabAdd('xbs_tab', {
-            title: title 
+            title: title
             ,content: '<iframe tab-id="'+id+'" frameborder="0" src="'+url+'" scrolling="yes" class="x-iframe"></iframe>'
             ,id: id
           })
@@ -19,8 +19,8 @@ $(function () {
         ,tabDelete: function(othis){
           //删除指定Tab项
           element.tabDelete('xbs_tab', '44'); //删除：“商品管理”
-          
-          
+
+
           othis.addClass('layui-btn-disabled');
         }
         ,tabChange: function(id){
@@ -44,7 +44,7 @@ $(function () {
                         $(".layui-form-checkbox").addClass('layui-form-checked');
                     }
                 }
-                
+
             });
         },
         getData:function  () {
@@ -59,7 +59,7 @@ $(function () {
 
     //开启表格多选
     tableCheck.init();
-      
+
 
     $('.container .left_open i').click(function(event) {
         if($('.left-nav').css('left')=='0px'){
@@ -90,7 +90,7 @@ $(function () {
     // 栏目多级显示效果
     $('.x-show').click(function () {
         if($(this).attr('status')=='true'){
-            $(this).html('&#xe625;'); 
+            $(this).html('&#xe625;');
             $(this).attr('status','false');
             cateId = $(this).parents('tr').attr('cate-id');
             $("tbody tr[fid="+cateId+"]").show();
@@ -108,13 +108,13 @@ $(function () {
 
     //左侧菜单效果
     // $('#content').bind("click",function(event){
-	//点击菜单显示效果	
+	//点击菜单显示效果
 	$(document).ready(function() {
        $('.left-nav #nav li .sub-menu li ').click(function(){
 		   $(this).addClass('menu-current').siblings().removeClass('menu-current');
 		   })
-    });	
-	
+    });
+
     $('.left-nav #nav li').click(function (event) {
 
         if($(this).children('.sub-menu').length){
@@ -123,7 +123,7 @@ $(function () {
                 $(this).find('.nav_right').html('&#xe6a7;');
                 $(this).children('.sub-menu').stop().slideUp();
                 $(this).siblings().children('.sub-menu').slideUp();
-				
+
             }else{
                 $(this).addClass('open');
                 $(this).children('a').find('.nav_right').html('&#xe6a6;');
@@ -145,19 +145,19 @@ $(function () {
                     return;
                 }
             };
-            
+
             tab.tabAdd(title,url,index+1);
             tab.tabChange(index+1);
         }
-        
+
         event.stopPropagation();
-         
+
     })
-    
-})
+
+});
 var cateIds = [];
 function getCateId(cateId) {
-    
+
     $("tbody tr[fid="+cateId+"]").each(function(index, el) {
         id = $(el).attr('cate-id');
         cateIds.push(id);
@@ -203,6 +203,34 @@ function x_admin_show(title,url,w,h){
 function x_admin_close(){
     var index = parent.layer.getFrameIndex(window.name);
     parent.layer.close(index);
+}
+
+//相册层 -通用的
+function previewImg(obj) {
+    var img = new Image();
+    img.src = obj.src;
+    var height = img.height + 50; // 原图片大小
+    var width = img.width; //原图片大小
+    var max_width = $(window).width()-50;
+    var max_height = $(window).height()-50;
+    width = (width<max_width) ? width : max_width;
+    var imgHtml = "<img src='" + obj.src + "' width='"+width+"' height='auto'/>";
+    //弹出层
+    layer.open({
+        type: 1,
+        shade: 0.8,
+        offset: 'auto',
+        area: width+'px',
+        maxHeight: max_height,
+        shadeClose:true,
+        scrollbar: false,
+        //title: "图片预览",
+        title: false, //不显示标题
+        content: imgHtml, //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+        cancel: function () {
+            //layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', { time: 5000, icon: 6 });
+        }
+    });
 }
 
 

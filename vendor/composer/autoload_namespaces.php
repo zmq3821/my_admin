@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'sts' => array($vendorDir . '/qcloud_sts/qcloud-sts-sdk/sts'),
 );

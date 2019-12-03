@@ -9,42 +9,79 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="__CSS__font.css">
     <link rel="stylesheet" href="__CSS__xadmin.css">
-
-    <script src="__JS__jquery.min.js"></script>
-    <script src="__LIBRARY__layui-v2.5.5/layui.js"></script>
-    <script type="text/javascript" src="__JS__xadmin.js"></script>
+    <link rel="stylesheet" href="__CSS__layuiadmin/admin.css" media="all">
+    <link rel="stylesheet" href="__CSS__layuiadmin/template.css" media="all">
+    <style type="text/css">
+        .layui-fluid {padding: 10px 6px 10px;}
+    </style>
 </head>
 <body>
+<div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="">首页</a><span lay-separator="">/</span>
+        <a href="">演示</a><span lay-separator="">/</span>
+        <a><cite>导航元素</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small btn_refresh" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:38px">&#xe9aa;</i>
+    </a>
+</div>
 
-<div class="layui-fluid layadmin-cmdlist-fluid">
-    <div class="layui-row layui-col-space30">
-        <?php for($i=0;$i<18;$i++){ ?>
-        <div class="layui-col-md2 layui-col-sm4">
-            <div class="cmdlist-container">
-                <a href="javascript:;">
-                    <img src="https://www.layui.com/admin/std/dist/layuiadmin/style/res/template/portrait.png">
-                </a>
-                <a href="javascript:;">
-                    <div class="cmdlist-text">
-                        <p class="info">2018春夏季新款港味短款白色T恤+网纱中长款chic半身裙套装两件套</p>
-                        <div class="price">
-                            <b>￥79</b>
-                            <p>
-                                ¥
-                                <del>130</del>
-                            </p>
-                            <span class="flow">
+<div class="x-body">
+
+    <div class="layui-row" style="display: none;">
+        <form class="layui-form layui-col-md12 x-so">
+            <input class="layui-input" placeholder="开始日" name="start" id="start" lay-key="1">
+            <input class="layui-input" placeholder="截止日" name="end" id="end" lay-key="2">
+            <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon"></i></button>
+        </form>
+    </div>
+
+    <xblock>
+        <button class="layui-btn layui-btn-danger layui-btn-sm" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+        <button type="button" class="layui-btn layui-btn-sm" onclick="x_admin_show('上传文件','{:url(\'Media/uploadImg\')}');">
+            <i class="layui-icon"></i>上传文件
+        </button>
+        <input class="layui-upload-file" type="file" accept="undefined" name="file">
+        <span class="x-right" style="line-height:40px">共有数据：88 条</span>
+    </xblock>
+
+    <div class="layui-fluid layadmin-cmdlist-fluid">
+        <div class="layui-row layui-col-space15">
+            <?php for($i=0;$i<18;$i++){ ?>
+            <div class="layui-col-md2 layui-col-sm4">
+                <div class="cmdlist-container">
+                    <a href="javascript:;">
+                        <img src="https://www.layui.com/admin/std/dist/layuiadmin/style/res/template/portrait.png">
+                    </a>
+                    <a href="javascript:;">
+                        <div class="cmdlist-text">
+                            <p class="info">2018春夏季新款港味短款白色T恤+网纱中长款chic半身裙套装两件套</p>
+                            <div class="price">
+                                <b>￥79</b>
+                                <p>
+                                    ¥
+                                    <del>130</del>
+                                </p>
+                                <span class="flow">
                       <i class="layui-icon layui-icon-rate"></i>
                       433
                     </span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
-        <?php }?>
+            <?php }?>
 
+        </div>
+    </div>
+
+</div>
 </body>
+<script src="__JS__jquery.min.js"></script>
+<script src="__LIBRARY__layui-v2.5.5/layui.js"></script>
+<script type="text/javascript" src="__JS__xadmin.js"></script>
 </html>

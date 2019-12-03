@@ -17,10 +17,6 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
             'think\\captcha\\' => 14,
             'think\\' => 6,
         ),
-        'a' => 
-        array (
-            'app\\' => 4,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -34,11 +30,17 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
         ),
         'think\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/thinkphp/library/think',
+            0 => __DIR__ . '/..' . '/topthink/framework/library/think',
         ),
-        'app\\' => 
+    );
+
+    public static $prefixesPsr0 = array (
+        's' => 
         array (
-            0 => __DIR__ . '/../..' . '/application',
+            'sts' => 
+            array (
+                0 => __DIR__ . '/..' . '/qcloud_sts/qcloud-sts-sdk/sts',
+            ),
         ),
     );
 
@@ -47,6 +49,7 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7826541c30adf15e44c6eb986909e495::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7826541c30adf15e44c6eb986909e495::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7826541c30adf15e44c6eb986909e495::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

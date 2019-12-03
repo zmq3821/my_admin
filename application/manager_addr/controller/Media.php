@@ -21,4 +21,13 @@ class Media extends Administer
     {
         return $this->fetch();
     }
+
+    public function uploadImg()
+    {
+        return $this->fetch();
+    }
+
+    public function blog_test(){
+        dump('asdasdasdasd');die;
+    }
 }

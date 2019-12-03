@@ -118,7 +118,8 @@ body{
     width: 100%;
 }
 .x-body{
-    padding: 20px;
+    /*padding: 20px;*/
+    padding: 5px 20px;
 }
 .x-nav{
     padding: 0 20px;
@@ -562,4 +563,8 @@ table th, table td {
         margin: 10px;
     }
 }
+
+/*样式补充*/
+/*导航条刷新按钮*/
+.btn_refresh {height:100%;border: none;background: none;float:right;color: #555;}
 
