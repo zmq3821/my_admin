@@ -7,7 +7,7 @@
  * Time: 下午 5:19
  */
 
-namespace app\api\version_1_0_0\controller;
+namespace app\api\controller\v_1_0_0;
 
 use app\basic\controller\ApiController;
 

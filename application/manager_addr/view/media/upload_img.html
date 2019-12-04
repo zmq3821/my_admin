@@ -137,7 +137,8 @@
 <script src="__LIBRARY__layui-v2.5.5/layui.js"></script>
 <script type="text/javascript" src="__JS__xadmin.js"></script>
 <script type="text/javascript" src="__JS__cos/cos-js-sdk-v5.min.js"></script>
-<script type="text/javascript" src="__JS__cos/base.js"></script>
+<!--<script type="text/javascript" src="__JS__cos/base.js"></script>-->
+<script type="text/javascript" src="__JS__cos/cos-action.js"></script>
 <script>
     layui.use(['layer','upload'], function(){
         var layer = layui.layer, upload = layui.upload;
@@ -146,9 +147,11 @@
         var config = {
             Bucket: "common-img-1255561412",
             Region: "ap-beijing",
-            StsUrl: "{:url('api/TencenCos/getCosSign')}"
+            StsUrl: "{:url('Cos/StsSign')}"
         };
-        var cos_key_name = '';
+
+        var cos_act = new cos_init(config);
+
 
         //上传图片（单张）
         upload.render({
@@ -160,43 +163,24 @@
             ,auto: false  //是否自动上传
             ,bindAction: '#upload-img-btn'
             ,size: 2048 //最大允许上传的文件大小(KB)
-            ,field: 'file_img'
             ,choose: function(obj){
                 //将每次选择的文件追加到文件队列
                 var files = obj.pushFile();
                 //预读本地文件示例，不支持ie8
                 obj.preview(function(index, file, result){
-                    $('#upload-img-list').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" onclick="previewImg(this)">')
-                    cos_key_name = file;
+                    $('#upload-img-list').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" onclick="previewImg(this)">');
                 });
             }
             ,before: function(obj){
-                console.log(obj);
-                console.log(cos_key_name);
+                obj.preview(function(index, file, result){
+
+
+                });
                 return false;
-
-                /*var upload_res = uploadPut(cos_key_name,file,function (res) {
-                    //上传完成后回调
-                    if(!res){
-                        layer.msg("图片上传失败，请检查后重试",{icon:2,time:2000});
-                    }else {
-                        var signUrl = res.Location ? 'https://'+res.Location : '';
-                        var cos_url = "/"+res.Key;
-
-                        //请求后台保存图片数据
-                        var correct_id = document.getElementById('correct_id').value;
-                        var record_id = document.getElementById('record_id').value;
-                        requestImgSave(order_id,correct_id,record_id,signUrl);
-
-                        layer.close(index);//关闭loading动画
-                    }
-                });*/
-            }
-            ,done: function(res){
-                //上传完毕
             }
             ,error: function(){
                 //请求异常回调
+                console.log('请求异常回调');
             }
         });
 

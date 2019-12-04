@@ -27,7 +27,7 @@ class Media extends Administer
         return $this->fetch();
     }
 
-    public function blog_test(){
-        dump('asdasdasdasd');die;
+    public function test () {
+        return $this->fetch();
     }
 }

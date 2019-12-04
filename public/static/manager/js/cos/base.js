@@ -42,14 +42,20 @@ var getAuthorization = function (options, callback) {
         bucket: options.Bucket,
         region: options.Region,
     }, function (data) {
-        var data = (new Function("return " + data))();
-        //console.log(data);
-        callback({
-            TmpSecretId: data.credentials.tmpSecretId,
-            TmpSecretKey: data.credentials.tmpSecretKey,
-            XCosSecurityToken: data.credentials.sessionToken,
-            ExpiredTime: data.expiredTime
-        });
+        if (data.status == 1) {
+            var data = (new Function("return " + data))();
+            //console.log(data);
+            callback({
+                TmpSecretId: data.credentials.tmpSecretId,
+                TmpSecretKey: data.credentials.tmpSecretKey,
+                XCosSecurityToken: data.credentials.sessionToken,
+                ExpiredTime: data.expiredTime
+            });
+
+        } else {
+
+        }
+
     });
 };
 

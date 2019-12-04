@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6f0cb7-a43b-4190-9242-25eab7204f09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/my_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/dev_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/dev_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/version_1_0_0/controller/TencenCos.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/v_1_0_0/TencenCos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/manager_addr/controller/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/controller/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/manager_addr/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/manager_addr/view/media/photos.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/media/photos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/manager/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/manager/css/xadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/manager/js/xadmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/manager/js/xadmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/manager/js/cos/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/manager/js/cos/base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,29 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="165" column="44" selection-start-line="165" selection-start-column="44" selection-end-line="165" selection-end-column="44" />
-              <folding>
-                <element signature="e#1946#3229#0" />
-                <element signature="e#2689#3525#0" />
-                <element signature="e#3532#4491#0" />
-                <element signature="e#5620#6294#0" />
-                <element signature="e#6308#7164#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/api/version_1_0_0/controller/TencenCos.php">
+        <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Cos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="253">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding>
-                <element signature="e#6#122#0#PHP" expanded="true" />
+                <element signature="e#161#197#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +34,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="154" column="18" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="18" />
+            <state relative-caret-position="617">
+              <caret line="184" column="7" lean-forward="true" selection-start-line="161" selection-start-column="4" selection-end-line="184" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#112#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -79,8 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table_name</find>
-      <find>setErrorMsg</find>
       <find>onclick=&quot;javascript:this.src='/index.php/captcha.html?rand='+Math.random()&quot;</find>
       <find>captcha</find>
       <find>conse</find>
@@ -101,7 +92,6 @@
       <find>x-red</find>
       <find>../fonts</find>
       <find>../../layuiadmin/style/res/template/portrait.png</find>
-      <find>url_convert</find>
       <find>upload_more</find>
       <find>upload-more-list</find>
       <find>test-upload-demoList</find>
@@ -109,6 +99,9 @@
       <find>input</find>
       <find>sts</find>
       <find>{</find>
+      <find>config</find>
+      <find>new</find>
+      <find>url_convert</find>
     </findStrings>
     <replaceStrings>
       <replace>__JS__login/</replace>
@@ -132,10 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/static/manager/css/demo.css" />
-        <option value="$PROJECT_DIR$/public/static/manager/css/component.css" />
-        <option value="$PROJECT_DIR$/application/manager_addr/config.php" />
-        <option value="$PROJECT_DIR$/vendor/.gitignore" />
         <option value="$PROJECT_DIR$/public/static/manager/css/login.css" />
         <option value="$PROJECT_DIR$/application/database.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/controller/User.php" />
@@ -166,7 +155,6 @@
         <option value="$PROJECT_DIR$/application/basic/controller/Administer.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/controller/HelloWorld.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/view/media/photos.html" />
-        <option value="$PROJECT_DIR$/application/manager_addr/controller/Media.php" />
         <option value="$PROJECT_DIR$/public/static/manager/js/xadmin.js" />
         <option value="$PROJECT_DIR$/public/static/manager/js/cos/basic.js" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -180,9 +168,14 @@
         <option value="$PROJECT_DIR$/application/common/controller/Upload.php" />
         <option value="$PROJECT_DIR$/application/common/controller/CosUpload.php" />
         <option value="$PROJECT_DIR$/application/basic/model/CosUpload.php" />
-        <option value="$PROJECT_DIR$/public/static/manager/js/cos/base.js" />
-        <option value="$PROJECT_DIR$/application/manager_addr/controller/Cos.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/controller/Media.php" />
+        <option value="$PROJECT_DIR$/application/manager_addr/view/media/test.html" />
+        <option value="$PROJECT_DIR$/application/api/config.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v_1_0_0/TencenCos.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" />
+        <option value="$PROJECT_DIR$/application/manager_addr/controller/Cos.php" />
+        <option value="$PROJECT_DIR$/public/static/manager/js/cos/base.js" />
+        <option value="$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js" />
       </list>
     </option>
   </component>
@@ -214,45 +207,6 @@
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="version_1_0_0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="version_1_0_0" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
@@ -300,25 +254,34 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/manager_addr/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../longdian" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\version_1_0_0\controller" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\version_1_0_0" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\css" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\basic\model" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js\login" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js\cos" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\manager_addr\controller" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\common" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\basic\controller" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\Api" />
-      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\public\static\manager\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\controller\version_1_0_0" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\controller" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\version_1_0_0\controller" />
+      <recent name="D:\phpstudy\PHPTutorial\WWW\my_admin\application\api\version_1_0_0" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,7 +314,8 @@
       <workItem from="1575017197775" duration="3459000" />
       <workItem from="1575248576933" duration="4248000" />
       <workItem from="1575254392154" duration="24009000" />
-      <workItem from="1575334997806" duration="25662000" />
+      <workItem from="1575334997806" duration="25887000" />
+      <workItem from="1575421299540" duration="16274000" />
     </task>
     <task id="LOCAL-00001" summary="上传 think_core 核心文件">
       <created>1574817769304</created>
@@ -409,17 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575281625337</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="相册上传功能进行中">
+      <created>1575367572342</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575367572342</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98892000" />
+    <option name="totallyTimeSpent" value="115391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -440,28 +411,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.63380283" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.63380283" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -475,7 +424,8 @@
     <MESSAGE value="注册登陆部分完成" />
     <MESSAGE value="后台主页框架搭建完成" />
     <MESSAGE value="增加相册管理页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加相册管理页面" />
+    <MESSAGE value="相册上传功能进行中" />
+    <option name="LAST_COMMIT_MESSAGE" value="相册上传功能进行中" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -489,64 +439,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/think_core/library/traits/controller/Jump.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/basic/common.php" />
-    <entry file="file://$PROJECT_DIR$/public/static/manager/js/layuiadmin/admin.js" />
-    <entry file="file://$PROJECT_DIR$/public/static/manager/js/layuiadmin/view.js" />
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/view/index/main2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="317" column="56" selection-start-line="317" selection-start-column="56" selection-end-line="317" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/view/index/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#46#77#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/basic/model/BaseUserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/manager/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/manager/fonts/iconfont.woff">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -578,13 +470,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/HelloWorld.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/HelloWorld.php" />
     <entry file="file://$PROJECT_DIR$/application/manager_addr/view/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -597,16 +483,6 @@
             <element signature="n#li#6;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#a#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#7;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Media.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#117#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,9 +616,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/Api/controller/Administer.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Api/controller/Administer.php" />
     <entry file="file://$PROJECT_DIR$/application/basic/controller/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -750,23 +624,6 @@
           <folding>
             <element signature="e#39#60#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/dev_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -787,46 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="272" column="20" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/controller/Administer.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/controller/CosUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/basic/model/CosUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="e#6#122#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="154" column="18" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/controller/Administer.php" />
+    <entry file="file://$PROJECT_DIR$/application/common/model/UserModel.php" />
+    <entry file="file://$PROJECT_DIR$/application/common/controller/CosUpload.php" />
+    <entry file="file://$PROJECT_DIR$/application/basic/model/CosUpload.php" />
     <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -837,36 +658,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Cos.php">
+    <entry file="file://$PROJECT_DIR$/vendor/qcloud_sts/qcloud-sts-sdk/demo/policy_test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/qcloud_sts/qcloud-sts-sdk/demo/sts_test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-auth.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/upload.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/route.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/manager/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="69">
+          <caret line="3" column="22414" selection-start-line="3" selection-start-column="22414" selection-end-line="3" selection-end-column="22414" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="103" column="16" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="16" />
           <folding>
-            <element signature="e#172#194#0#PHP" expanded="true" />
+            <element signature="e#6#80#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/version_1_0_0/controller/TencenCos.php">
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="46">
+          <caret line="2" column="6" selection-start-line="2" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#111#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v_1_0_0/TencenCos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="54" selection-end-column="9" />
           <folding>
             <element signature="e#6#122#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Media.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#117#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/dev_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="165" column="44" selection-start-line="165" selection-start-column="44" selection-end-line="165" selection-end-column="44" />
+        <state relative-caret-position="359">
+          <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/controller/Cos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <element signature="e#1946#3229#0" />
-            <element signature="e#2689#3525#0" />
-            <element signature="e#3532#4491#0" />
-            <element signature="e#5620#6294#0" />
-            <element signature="e#6308#7164#0" />
+            <element signature="e#161#197#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="184" column="7" lean-forward="true" selection-start-line="161" selection-start-column="4" selection-end-line="184" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#112#0" />
           </folding>
         </state>
       </provider>
