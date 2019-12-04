@@ -39,6 +39,9 @@
                     <div class="layui-card-body">
                         <button type="button" class="layui-btn" id="upload-img"><i class="layui-icon">&#xe67c;</i>上传文件</button>
                         <!--<input class="layui-upload-file" type="file" accept="image/*" name="file_img">-->
+                        <div class="layui-progress" style="margin-top: 5px;" lay-filter="progress-upload-img">
+                            <div class="layui-progress-bar" lay-percent="0%"></div>
+                        </div>
                         <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                             预览图：
                             <div class="layui-upload-list" id="upload-img-list"></div>
@@ -140,17 +143,15 @@
 <!--<script type="text/javascript" src="__JS__cos/base.js"></script>-->
 <script type="text/javascript" src="__JS__cos/cos-action.js"></script>
 <script>
-    layui.use(['layer','upload'], function(){
-        var layer = layui.layer, upload = layui.upload;
+    layui.use(['layer','upload','element'], function(){
+        var layer = layui.layer, upload = layui.upload, element = layui.element;
 
         /*上传必需参数*/
         var config = {
             Bucket: "common-img-1255561412",
             Region: "ap-beijing",
-            StsUrl: "{:url('Cos/StsSign')}"
+            StsUrl: "{:url('Cos/StsSign')}?bucket_name=common-img-1255561412"
         };
-
-        var cos_act = new cos_init(config);
 
 
         //上传图片（单张）
@@ -162,7 +163,7 @@
             ,exts: 'jpg|png|gif|bmp|jpeg'
             ,auto: false  //是否自动上传
             ,bindAction: '#upload-img-btn'
-            ,size: 2048 //最大允许上传的文件大小(KB)
+            ,size: 99048 //最大允许上传的文件大小(KB)
             ,choose: function(obj){
                 //将每次选择的文件追加到文件队列
                 var files = obj.pushFile();
@@ -173,7 +174,12 @@
             }
             ,before: function(obj){
                 obj.preview(function(index, file, result){
-
+                    var cos_act = new cos_init(config);
+                    cos_act.uploadFile(file.name, file, function (info) {
+                        console.log('回调',info);
+                        var percent = parseInt(info.percent * 10000) / 100;
+                        element.progress('progress-upload-img', percent); //可配合 layui 进度条元素使用
+                    });
 
                 });
                 return false;
