@@ -40,20 +40,14 @@ function cos_init(info) {
                     var percent = parseInt(info.percent * 10000) / 100;
                     var speed = parseInt(info.speed / 1024 / 1024 * 100) / 100;
                     console.log('进度：' + percent + '%; 速度：' + speed + 'Mb/s;');
-                    if(typeof fn == "function") fn(info);
-                },
-                onFileFinish: function (err, data, options) {
-                    console.log(options.Key + ' 上传' + (err ? '失败' : '完成'));
-                    if(typeof fn == "function") fn(info);
-                },
-            }, function(err, data) {
-                var return_data;
-                if(err){
-                    return_data = false;
-                }else{
-                    return_data = data;
+                    if(typeof fn == "function") fn('progress', 1, info);
                 }
-                if(typeof fn == "function") fn(return_data);
+            }, function(err, data) {
+                if(err){
+                    if(typeof fn == "function") fn('done', 0, err);
+                }else{
+                    if(typeof fn == "function") fn('done',  1, data);
+                }
             });
         }
     } catch (e) {
