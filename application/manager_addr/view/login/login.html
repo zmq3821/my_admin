@@ -77,11 +77,9 @@
             var params = data.field;
             requestPost("{:url('Login/doLogin')}", params, function (res) {
                 if (res.status == 1) {
-                    layer.msg("登陆成功", {icon:1,time:1500}, function () {
-                        if (res.data.jump_url != '' && res.data.jump_url != null) {
-                            window.location.href='' + res.data.jump_url;
-                        }
-                    });
+                    if (res.data.jump_url != '' && res.data.jump_url != null) {
+                        window.location.href='' + res.data.jump_url;
+                    }
                 } else {
                     animation_shake();
                     resetCaptcha('captcha_img');//重置验证码
