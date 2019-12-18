@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6f0cb7-a43b-4190-9242-25eab7204f09" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js" afterDir="false" />
 =======
 >>>>>>> Stashed changes
+=======
+      <change beforePath="$PROJECT_DIR$/application/manager_addr/view/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/manager_addr/view/login/login.html" afterDir="false" />
+>>>>>>> 395177774b315b14b3d0ac8dc63bf640b6154087
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="2907">
               <caret line="153" selection-start-line="153" selection-end-line="185" selection-end-column="1" />
             </state>
           </provider>
@@ -35,25 +39,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="3363">
               <caret line="177" column="66" selection-start-line="177" selection-start-column="66" selection-end-line="177" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+              <folding>
+                <element signature="n#!!doc;n#cos_init#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js">
+        <entry file="file://$PROJECT_DIR$/application/manager_addr/view/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="45" column="75" lean-forward="true" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
-              <folding>
-                <element signature="n#!!doc;n#cos_init#0" />
-              </folding>
+            <state relative-caret-position="163">
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -138,7 +149,6 @@
         <option value="$PROJECT_DIR$/application/common.php" />
         <option value="$PROJECT_DIR$/application/basic/controller/Admin.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/controller/Login.php" />
-        <option value="$PROJECT_DIR$/application/manager_addr/view/login/login.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/basic/model/BaseUserModel.php" />
         <option value="$PROJECT_DIR$/application/manager_addr/view/index/main.html" />
@@ -173,6 +183,7 @@
         <option value="$PROJECT_DIR$/public/static/manager/js/cos/base.js" />
         <option value="$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html" />
         <option value="$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js" />
+        <option value="$PROJECT_DIR$/application/manager_addr/view/login/login.html" />
       </list>
     </option>
   </component>
@@ -208,37 +219,28 @@
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="cos" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="manager_addr" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -312,7 +314,12 @@
       <workItem from="1575248576933" duration="4248000" />
       <workItem from="1575254392154" duration="24009000" />
       <workItem from="1575334997806" duration="25887000" />
+<<<<<<< HEAD
       <workItem from="1575421299540" duration="16314000" />
+=======
+      <workItem from="1575421299540" duration="16274000" />
+      <workItem from="1576334686705" duration="136000" />
+>>>>>>> 395177774b315b14b3d0ac8dc63bf640b6154087
     </task>
     <task id="LOCAL-00001" summary="上传 think_core 核心文件">
       <created>1574817769304</created>
@@ -388,8 +395,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="118544000" />
+=======
+    <option name="totallyTimeSpent" value="118680000" />
+>>>>>>> 395177774b315b14b3d0ac8dc63bf640b6154087
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -401,7 +412,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
 >>>>>>> Stashed changes
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19667171" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19969743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,8 +424,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.63380283" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32786885" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.63278687" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.63380283" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -496,13 +507,6 @@
             <element signature="n#a#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#7;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/manager_addr/view/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -738,30 +742,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="2907">
           <caret line="153" selection-start-line="153" selection-end-line="185" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/manager_addr/view/media/upload_img.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="3363">
           <caret line="177" column="66" selection-start-line="177" selection-start-column="66" selection-end-line="177" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/manager/js/cos/cos-action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="45" column="75" lean-forward="true" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+        <state relative-caret-position="57">
+          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
           <folding>
             <element signature="n#!!doc;n#cos_init#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/manager_addr/view/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
         </state>
       </provider>
     </entry>
