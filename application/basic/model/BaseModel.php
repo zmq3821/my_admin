@@ -44,4 +44,20 @@ class BaseModel extends Model
     {
         return $this->error_msg;
     }
+
+    /**
+     * @notes: 通用的返回结构
+     * @param $status
+     * @param $msg
+     * @param array $data
+     * @return array
+     */
+    public function returnData($status, $msg, array $data){
+        if ($status == 1) {
+            $return = array('status'=>$status, 'msg'=>$msg, 'data'=>$data);
+        } else {
+            $return = array('status'=>$status, 'msg'=>$msg);
+        }
+        return $return;
+    }
 }

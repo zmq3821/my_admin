@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit7826541c30adf15e44c6eb986909e495
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
     );
 
@@ -16,6 +20,18 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
             'think\\composer\\' => 15,
             'think\\captcha\\' => 14,
             'think\\' => 6,
+        ),
+        'P' => 
+        array (
+            'Psr\\Http\\Message\\' => 17,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\Command\\Guzzle\\' => 26,
+            'GuzzleHttp\\Command\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
     );
 
@@ -31,6 +47,31 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
         'think\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/framework/library/think',
+            1 => __DIR__ . '/..' . '/topthink/think-image/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\Command\\Guzzle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle-services/src',
+        ),
+        'GuzzleHttp\\Command\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/command/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
     );
 
@@ -40,6 +81,13 @@ class ComposerStaticInit7826541c30adf15e44c6eb986909e495
             'sts' => 
             array (
                 0 => __DIR__ . '/..' . '/qcloud_sts/qcloud-sts-sdk/sts',
+            ),
+        ),
+        'Q' => 
+        array (
+            'Qcloud\\Cos\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/qcloud/cos-sdk-v5/src',
             ),
         ),
     );

@@ -86,7 +86,11 @@ function randomkeys($length){
 }
 
 
-// php 获取当前访问的完整url
+/**
+ * @notes: php 获取当前访问的完整url
+ * @return string
+ * @author: zmq
+ */
 function get_current_url() {
     $url = 'http://';
     if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
@@ -101,6 +105,33 @@ function get_current_url() {
     }
 
     return $url;
+}
+
+/**
+ * t函数用于过滤标签，输出没有html的干净的文本
+ * @param string text 文本内容
+ * @return string 处理后内容
+ */
+function t($text) {
+    $text = nl2br($text);
+    $text = real_strip_tags($text);
+    $text = addslashes($text);
+    $text = trim($text);
+
+    return $text;
+}
+
+/**
+ * @notes: 把HTML实体转换为字符 并剥去字符串中的HTML标签
+ * @param $str
+ * @param string $allowable_tags 规定允许的标签。这些标签不会被删除。
+ * @return string
+ * @author: zmq
+ */
+function real_strip_tags($str, $allowable_tags = '') {
+    $str = html_entity_decode($str, ENT_QUOTES, 'UTF-8');// 把 HTML 实体转换为字符
+
+    return strip_tags($str, $allowable_tags);
 }
 
 

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'sts' => array($vendorDir . '/qcloud_sts/qcloud-sts-sdk/sts'),
+    'Qcloud\\Cos\\' => array($vendorDir . '/qcloud/cos-sdk-v5/src'),
 );

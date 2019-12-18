@@ -1,8 +1,10 @@
 {
     "require": {
         "php": ">=5.4.0",
-        "topthink/framework": "5.0.*",
         "topthink/think-captcha": "1.*",
-        "qcloud_sts/qcloud-sts-sdk": " 1.3.*"
+        "topthink/think-image": "*",
+        "qcloud_sts/qcloud-sts-sdk": " 1.3.*",
+        "qcloud/cos-sdk-v5": ">=2.0"
     }
 }
+

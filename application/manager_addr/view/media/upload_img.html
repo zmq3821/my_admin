@@ -167,10 +167,12 @@
         //上传图片（单张）
         upload.render({
             elem: '#upload-img'
-            ,url: '/upload/'
+            ,url: "{:url('Cos/Upload')}?file_type=1"
+            ,method: 'post'
             ,multiple: true
             ,accept: 'images' //允许上传的文件类型
             ,exts: 'jpg|png|gif|bmp|jpeg'
+            ,field: 'file'
             ,auto: false  //是否自动上传
             ,bindAction: '#upload-img-btn'
             ,size: 99048 //最大允许上传的文件大小(KB)
@@ -185,7 +187,7 @@
             }
             ,before: function(obj){
                 obj.preview(function(index, file, result){
-                    var cos_act = new cos_init(config);
+                    /*var cos_act = new cos_init(config);
                     cos_act.uploadFile(file.name, file, function (event, status, info) {
                         if (event == 'progress') { //上传进度回调
                             var percent = parseInt(info.percent * 10000) / 100 + '%';console.log('progress',percent);
@@ -197,16 +199,11 @@
                             if (status) {
                                 var signUrl = res.Location ? 'https://'+res.Location : '';
                             }
-
                         }
-                    });
-
+                    });*/
+            return false;
                 });
                 return false;
-            }
-            ,error: function(){
-                //请求异常回调
-               // console.log('请求异常回调');
             }
         });
 

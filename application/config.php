@@ -265,7 +265,7 @@ $config = [
     // | 腾讯云COS参数设置
     // +----------------------------------------------------------------------
 
-    'cos_config' => [
+    'cos_conf' => [
         'secretId'        => 'AKIDHQPDpHLks46yaU60XurLvfIk8Wu8n4B9',    //云 API 密钥 SecretId
         'secretKey'       => 'N0Tlstp4BFHTzRueFfT7CWoxvq2d6EQR',       //云 API 密钥 SecretKey
         'region'          => 'ap-beijing',       //设置一个默认的存储桶地域
