@@ -20,4 +20,18 @@ class AttachModel extends BaseModel
     protected $pk = 'uid';
 
 
+    public function formatAttachData($file_info, $file_type=0)
+    {
+        if (!$file_info) return false;
+
+        if ($file_type == 'image') { // 图片
+            $image_info = getimagesize($file_info['tmp_name']);
+            if (empty($image_info)) {}
+        } elseif ($file_type == 'video') { // 视频
+
+        } else { //普通文件
+
+        }
+
+    }
 }

@@ -25,9 +25,11 @@ class CosModel extends BaseModel
      * @param $file_info 文件信息
      * @param $file_type 文件类型 0:普通文件，1：图片，2;视频
      */
-    public function uploadFile($file_info, $file_type)
+    public function uploadFile($file_info, $file_type=0)
     {
         if (!$file_info) return false;
+
+
         $cos_logic = new CosLogic();
         $bucket = $this->getBucket($file_type);
         if (empty($bucket)) {
@@ -37,7 +39,8 @@ class CosModel extends BaseModel
 
         $result = $cos_logic->_putObject($bucket, $key, $file_info['tmp_name']);
         if ($result['status'] != 1) {
-            ajax_error('上传失败');
+            $this->returnData(0, $result['msg']);
+            return false;
         }
         $remote_url = $result['data']['Location'];
 

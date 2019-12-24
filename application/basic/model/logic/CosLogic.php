@@ -61,7 +61,7 @@ class CosLogic extends BaseModel
     public function _putObject($bucket, $key, $body)
     {
         if(!$this->checkParams($bucket, $key, $body) ) {
-            return false;
+            return $this->returnData(0, '参数错误');
         }
         //putObject(上传接口，最大支持上传5G文件) 66.154% 64.448%
         //bucket 的命名规则为{name}-{appid} ，此处填写的存储桶名称必须为此格式

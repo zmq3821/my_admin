@@ -47,13 +47,7 @@ class Cos extends Administer
 
         //上传到cos
         $cos_model = new CosModel();
-        $cos_model->UploadFile($file_info, $file_type);
-
-
-
-
-
-
+        $result = $cos_model->UploadFile($file_info, $file_type);
 
     }
 }
