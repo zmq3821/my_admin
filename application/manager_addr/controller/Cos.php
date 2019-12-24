@@ -36,6 +36,11 @@ class Cos extends Administer
         }
     }
 
+    /**
+     * Notes: 上传文件
+     * User: zmq
+     * Date: 2019-12-24 21:21
+     */
     public function upload()
     {
         $file_type = input('request.file_type/d'); // 0:普通文件，1：图片，2;视频
@@ -44,10 +49,16 @@ class Cos extends Administer
             ajax_error('上传文件无效');
         }
         $file_info = $file->getInfo();
-
+        dump($file_info);die;
         //上传到cos
         $cos_model = new CosModel();
         $result = $cos_model->UploadFile($file_info, $file_type);
+        if ($result['status'] !=1) {
+            ajax_error('上传文件失败');
+        }
+        $remote_url = $result['data']['remote_url'];
+
+        //保存文件信息到数据库
 
     }
 }

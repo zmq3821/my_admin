@@ -23,10 +23,11 @@ class AttachModel extends BaseModel
     public function formatAttachData($file_info, $file_type=0)
     {
         if (!$file_info) return false;
-
+        $data = [];
         if ($file_type == 'image') { // 图片
             $image_info = getimagesize($file_info['tmp_name']);
-            if (empty($image_info)) {}
+            if (empty($image_info)) return false;
+
         } elseif ($file_type == 'video') { // 视频
 
         } else { //普通文件

@@ -29,7 +29,6 @@ class CosModel extends BaseModel
     {
         if (!$file_info) return false;
 
-
         $cos_logic = new CosLogic();
         $bucket = $this->getBucket($file_type);
         if (empty($bucket)) {
@@ -39,12 +38,21 @@ class CosModel extends BaseModel
 
         $result = $cos_logic->_putObject($bucket, $key, $file_info['tmp_name']);
         if ($result['status'] != 1) {
-            $this->returnData(0, $result['msg']);
-            return false;
+            return $this->returnData(0, $result['msg']);
         }
         $remote_url = $result['data']['Location'];
 
-
+        //保存文件信息
+        $data = [
+            'attach_type'   => $file_type,
+            'create_time'   => time(),
+            'name'          => $key,
+            'type'          => $file_info['type'],
+            'size'          => $file_info['size'],
+        ];
+        $attach_model = new AttachModel();
+        $attach_model->data($data);
+        return $attach_model->save();
     }
 
     /**
@@ -76,6 +84,7 @@ class CosModel extends BaseModel
      */
     public function resetFileName($filename)
     {
+        //todo 重命名逻辑
         return $filename;
     }
 
